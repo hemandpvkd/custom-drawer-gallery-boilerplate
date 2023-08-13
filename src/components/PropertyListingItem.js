@@ -3,7 +3,7 @@ import React from 'react';
 
 const PropertyListingItem = ({id, title, description, uri, navigation}) => {
   return (
-    <TouchableOpacity onPress={()=>navigation.push('instaViewStack')}>
+    <TouchableOpacity onPress={()=>navigation.navigate('InstaViewStack')}>
       <View style={styles.listingWrapper}>
         <Image
           style={styles.listImage}

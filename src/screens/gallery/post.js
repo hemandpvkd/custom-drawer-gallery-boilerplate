@@ -20,7 +20,8 @@ function Posts({navigation}) {
             <Animated.View sharedTransitionTag={item.id.toString()}>
               <Animated.Image
                 source={{uri: item.uri}}
-                style={styles.post}
+                visibility= "visible" 
+                style={[styles.post, { opacity: 1}]}
                 sharedTransitionTag={item.id.toString() + '1'}
               />
             </Animated.View>
@@ -41,7 +42,6 @@ export default Posts;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 50,
   },
   post: {
     width: width / 3,

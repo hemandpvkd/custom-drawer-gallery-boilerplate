@@ -8,24 +8,26 @@ import {GestureHandlerRootView} from 'react-native-gesture-handler';
 
 const Stack = createNativeStackNavigator();
 
-const instaViewStack = () => {
+const InstaViewStack = () => {
   return (
     <Stack.Navigator
       screenOptions={{
         headerShown: false,
-        presentation: 'transparentModal'
+        // presentation: 'transparentModal'
       }}>
       <Stack.Screen
         name="Posts"
         component={Screen1}
         options={{headerShown: false,
-          presentation: 'transparentModal'}}
+          presentation: 'transparentModal'
+        }}
       />
       <Stack.Screen
         name="Detail"
         component={Screen2}
         options={{headerShown: false,
-          presentation: 'transparentModal'}}
+        presentation: 'transparentModal'
+        }}
       />
     </Stack.Navigator>
   );
@@ -45,10 +47,10 @@ const App = () => {
             options={{headerShown: false}}
           />
           <Stack.Screen
-            name="instaViewStack"
-            component={instaViewStack}
-            options={{headerShown: false, 
-              presentation: 'transparentModal'}}
+            name="InstaViewStack"
+            component={InstaViewStack}
+            options={{headerShown: false,
+            }}
           />
         </Stack.Navigator>
       </NavigationContainer>

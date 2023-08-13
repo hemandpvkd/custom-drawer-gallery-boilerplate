@@ -5,6 +5,7 @@ import Dashboard from '../screens/dashboard';
 import Wishlist from '../screens/wishlist';
 import History from '../screens/history';
 import {Platform} from 'react-native';
+import TabNavigator from './bottomTab';
 
 const Drawer = createDrawerNavigator();
 
@@ -37,6 +38,13 @@ const DrawerNavigator = () => {
           backgroundColor: Colors.bg,
         },
       }}>
+        <Drawer.Screen
+        name="TabNavigator"
+        component={TabNavigator}
+        options={{
+          drawerIcon: options => drawerIcon(options, 'home-outline'),
+        }}
+      />
       <Drawer.Screen
         name="Dashboard"
         component={Dashboard}
